@@ -27,7 +27,10 @@ export async function sanityFetch<QueryResponse>({
   qParams?: QueryParams;
   tags: string[];
 }): Promise<QueryResponse> {
-  return client.fetch<QueryResponse>(query, qParams, {
+  // Ensure qParams is never undefined when passed to client.fetch
+  const queryParams: QueryParams = qParams || {}; // Assuming QueryParams can be defaulted to {}
+
+  return client.fetch<QueryResponse>(query, queryParams, {
     cache: mode === "development" ? "no-store" : "force-cache",
     next: { tags },
   });

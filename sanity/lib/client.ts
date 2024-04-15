@@ -7,7 +7,7 @@ export const client = createClient({
   dataset,
   projectId,
   useCdn: !token,
-  perspective: TextDecoderoken ? "previewDrafts" : "published",
+  perspective: token ? "previewDrafts" : "published",
   stega: {
     enabled: token ? true : false,
     studioUrl: "/studio",
