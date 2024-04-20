@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "@giscus/react": "^2.3.0",
-    "@sanity/client": "^6.7.0",
+    "@sanity/client": "^6.15.19",
     "@sanity/code-input": "^4.1.1",
     "@sanity/image-url": "^1.0.2",
     "@sanity/vision": "^3.36.2",
@@ -37,6 +37,7 @@
     "@types/refractor": "^3.0.2",
     "@types/styled-components": "^5.1.34",
     "@vercel/analytics": "^1.0.1",
+    "encoding": "^0.1.13",
     "next-sanity-image": "^6.1.0",
     "next-themes": "^0.2.1",
     "react-refractor": "^2.1.7"
