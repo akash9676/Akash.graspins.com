@@ -1,4 +1,4 @@
-import getYoutubeId from "@/app/utils/get-youtubeId";
+import getYoutubeId from "../../../app/utils/get-youtubeId";
 import { BiLogoYoutube } from "react-icons/bi";
 import YoutubeIframe from "./YoutubeIframe";
 import { PreviewProps } from "sanity";
