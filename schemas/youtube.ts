@@ -1,5 +1,5 @@
 import { defineField, defineType } from "sanity";
-import { YoutubeWidget } from "@/app/components/shared/YoutubeWidget";
+import { YoutubeWidget } from "../app/components/shared/YoutubeWidget";
 
 export const youtube = defineType({
   name: "youtube",
