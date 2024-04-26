@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Metadata } from "next";
 import { projectsQuery } from "@/lib/sanity.query";
 import type { ProjectType } from "@/types";
 import EmptyState from "../components/shared/EmptyState";
@@ -8,18 +7,6 @@ import { Slide } from "../animation/Slide";
 import { sanityFetch } from "@/lib/sanity.client";
 import PageHeading from "../components/shared/PageHeading";
 
-export const metadata: Metadata = {
-  title: "Project | Akash",
-  metadataBase: new URL("https://victoreke.com/projects"),
-  description: "Explore projects built by Akash",
-  openGraph: {
-    title: "Projects | Victor Eke",
-    url: "https://victoreke.com/projects",
-    description: "Explore projects built by Akash",
-    images:
-      "https://res.cloudinary.com/victoreke/image/upload/v1692636087/victoreke/projects.png",
-  },
-};
 
 export default async function Project() {
   const projects: ProjectType[] = await sanityFetch({

@@ -5,20 +5,7 @@ import { formatDate } from "@/app/utils/date";
 import { jobQuery } from "@/lib/sanity.query";
 import { JobType } from "@/types";
 import { sanityFetch } from "@/lib/sanity.client";
-import { Metadata } from "next";
 
-export const metadata: Metadata = {
-  title: "Experience | Akash",
-  metadataBase: new URL("https://victoreke.com/projects"),
-  description: "Explore Companies worked by Akash",
-  openGraph: {
-    title: "Experience | Akash",
-    url: "https://victoreke.com/projects",
-    description: "Explore Companies worked by Akash",
-    images:
-      "https://res.cloudinary.com/victoreke/image/upload/v1692636087/victoreke/projects.png",
-  },
-};
 
 export default async function Job() {
   const job: JobType[] = await sanityFetch({

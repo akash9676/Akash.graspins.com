@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { Metadata } from "next";
 import { profileQuery } from "@/lib/sanity.query";
 import type { ProfileType } from "@/types";
 import { PortableText } from "@portabletext/react";
@@ -11,20 +10,6 @@ import { Slide } from "../animation/Slide";
 import { sanityFetch } from "@/lib/sanity.client";
 import PageHeading from "@/app/components/shared/PageHeading";
 
-export const metadata: Metadata = {
-  title: "About | Akash",
-  metadataBase: new URL("https://victoreke.com/about"),
-  description:
-    "Learn more about my skills, experience and technical background",
-  openGraph: {
-    title: "About | Akash ",
-    url: "https://victoreke.com/about",
-    description:
-      "Learn more about my skills, experience and technical background",
-    images:
-      "https://res.cloudinary.com/victoreke/image/upload/v1692635746/victoreke/og.png",
-  },
-};
 
 export default async function About() {
   const profile: ProfileType[] = await sanityFetch({

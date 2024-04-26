@@ -1,6 +1,5 @@
 import Image from "next/legacy/image";
 import Link from "next/link";
-import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import type { PostType } from "@/types";
 import { singlePostQuery } from "@/lib/sanity.query";
@@ -25,58 +24,6 @@ type Props = {
   };
 };
 
-const fallbackImage: string =
-  "https://res.cloudinary.com/victoreke/image/upload/v1692636087/victoreke/blog.png";
-
-// Dynamic metadata for SEO
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const slug = params.post;
-  const post: PostType = await sanityFetch({
-    query: singlePostQuery,
-    tags: ["Post"],
-    qParams: { slug },
-  });
-
-  if (!post) {
-    notFound();
-  }
-
-  return {
-    title: `${post.title}`,
-    metadataBase: new URL(`https://victoreke.com/blog/${post.slug}`),
-    description: post.description,
-    publisher: post.author.name,
-    keywords: post.tags,
-    alternates: {
-      canonical:
-        post.canonicalLink || `https://victoreke.com/blog/${post.slug}`,
-    },
-    openGraph: {
-      images:
-        urlFor(post.coverImage?.image).width(1200).height(630).url() ||
-        fallbackImage,
-      url: `https://victoreke.com/blog/${post.slug}`,
-      title: post.title,
-      description: post.description,
-      type: "article",
-      siteName: "victoreke.com",
-      authors: post.author.name,
-      tags: post.tags,
-      publishedTime: post._createdAt,
-      modifiedTime: post._updatedAt || "",
-    },
-    twitter: {
-      title: post.title,
-      description: post.description,
-      images:
-        urlFor(post.coverImage?.image).width(680).height(340).url() ||
-        fallbackImage,
-      creator: `@${post.author.twitterUrl.split("twitter.com/")[1]}`,
-      site: `@${post.author.twitterUrl.split("twitter.com/")[1]}`,
-      card: "summary_large_image",
-    },
-  };
-}
 
 export default async function Post({ params }: Props) {
   const slug = params.post;
@@ -138,7 +85,7 @@ export default async function Post({ params }: Props) {
               <Image
                 className="rounded-xl border dark:border-zinc-800 border-zinc-100 object-cover"
                 layout="fill"
-                src={post.coverImage?.image || fallbackImage}
+                src={post.coverImage?.image }
                 alt={post.coverImage?.alt || post.title}
                 quality={100}
                 placeholder={post.coverImage?.lqip ? `blur` : "empty"}
