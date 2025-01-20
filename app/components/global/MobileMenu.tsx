@@ -30,11 +30,6 @@ export default function MobileMenu() {
       href: "/projects",
       icon: HiBeaker,
     },
-    {
-      title: "Blog",
-      href: "/blog",
-      icon: HiBookmarkAlt,
-    },
   ];
 
   const onToggleNav = () => {
