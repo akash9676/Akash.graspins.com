@@ -9,7 +9,7 @@ export const experienceEntries: JobType[] = [
     logo: "https://www.google.com/s2/favicons?domain=tu-darmstadt.de&sz=128",
     url: "https://care.ukp.informatik.tu-darmstadt.de/",
     description:
-      "Student Web Developer at the Ubiquitous Knowledge Processing Lab, contributing to CARE (Collaborative AI-Assisted Research Environment)—an open-source platform for collaborative document reading, annotation, and AI-assisted analysis. Building scalable real-time features with Vue.js, Docker, HTML/CSS, Sequelize, and Socket.io, with a focus on integrating NLP capabilities into collaborative research workflows.",
+      "Student developer at the Ubiquitous Knowledge Processing Lab on CARE, an open-source stack for shared PDF reading, annotations, and NLP-backed analysis. I ship real-time UI in Vue.js, run services in Docker, persist data with Sequelize, and use Socket.io so multiple readers stay in sync.",
     startDate: "2024-09-01",
     endDate: "",
   },
@@ -20,9 +20,9 @@ export const experienceEntries: JobType[] = [
     logo: "https://www.google.com/s2/favicons?domain=graspins.com&sz=128",
     url: "https://akash-graspins-com.vercel.app/",
     description:
-      "Led end-to-end web delivery for freelance and client projects using React, Next.js, Node.js, and Tailwind. Shipped production sites including HR IT Solutions, Archana Garments, VIVA Soft, Veduka Restaurant, and Soltex—handling design, development, deployment on Vercel, and ongoing iterations.",
+      "Led delivery for freelance and client sites in React, Next.js, Node.js, and Tailwind. Shipped HR IT Solutions, Archana Garments, VIVA Soft, Veduka Restaurant, and Soltex: design, build, Vercel deploys, and follow-up fixes.",
     startDate: "2024-04-01",
-    endDate: "",
+    endDate: "2024-08-31",
   },
   {
     _id: "local-ieee",
@@ -31,7 +31,7 @@ export const experienceEntries: JobType[] = [
     logo: "https://www.google.com/s2/favicons?domain=ieee.org&sz=128",
     url: "https://webinabox.vtools.ieee.org/wibp_officers/index/STB60219485",
     description:
-      "Guided peers on research publications (sentiment analysis, chatbot optimization, sustainable blockchain) and maintained the IEEE GNITC web presence to improve event visibility and outreach.",
+      "Helped peers publish work on sentiment analysis, chatbot tuning, and sustainable blockchain. Kept the IEEE GNITC site updated so events and officer info were easy to find.",
     startDate: "2023-11-02",
     endDate: "2024-05-31",
   },
@@ -39,10 +39,10 @@ export const experienceEntries: JobType[] = [
     _id: "local-ik",
     name: "IK Technologies Pvt Ltd",
     jobTitle: "Associate Engineer",
-    logo: "https://www.google.com/s2/favicons?domain=iktec.io&sz=128",
-    url: "https://www.iktec.io/",
+    logo: "/experience/ik-technologies.png",
+    url: "https://www.linkedin.com/company/iktechnologies/home/",
     description:
-      "Built SharePoint Framework (SPFx) solutions with React and TypeScript, integrated Azure DevOps for collaboration, and delivered client-facing web components in a fast-paced engineering team.",
+      "Associate Engineer at IK Technologies in Hyderabad (Aug–Dec 2023). Built SharePoint Framework web parts in React and TypeScript, hooked builds into Azure DevOps, and shipped client UI components from specs under weekly release cadences.",
     startDate: "2023-08-03",
     endDate: "2023-12-03",
   },
@@ -53,7 +53,7 @@ export const experienceEntries: JobType[] = [
     logo: "https://www.google.com/s2/favicons?domain=developers.google.com&sz=128",
     url: "https://developers.google.com/community/gdsc",
     description:
-      "Engaged 3,000+ developers across 30 events covering web, DSA, ML, blockchain, and cloud. Led a 5-day web development bootcamp mentoring 200+ participants and coordinated hackathons and tech talks.",
+      "Ran content and design for GDSC and co-led development tracks. Ran about 30 events for 3,000+ students on web, DSA, ML, blockchain, and cloud, including a five-day web bootcamp with 200+ participants.",
     startDate: "2022-07-04",
     endDate: "2023-08-05",
   },

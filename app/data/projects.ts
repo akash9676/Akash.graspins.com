@@ -33,53 +33,13 @@ function clientSite(
   };
 }
 
-/** Freelance client websites + open-source / research projects. */
+/** Freelance client websites + open-source / research projects. CARE is listed first. */
 export const featuredProjects: ProjectType[] = [
-  clientSite(
-    "client-hr-it",
-    "HR IT Solutions",
-    "hr-it",
-    "Corporate site for HR & IT services.",
-    "https://hr-it-website.vercel.app/",
-    "Marketing and services website for HR IT Solutions—built with modern React/Next.js patterns, responsive layout, and clear service positioning for HR and IT consulting."
-  ),
-  clientSite(
-    "client-archana",
-    "Archana Garments",
-    "archana-garments",
-    "E-commerce style storefront for a garments brand.",
-    "https://archanagarments.vercel.app/",
-    "Brand and catalog experience for Archana Garments—product-focused UI, mobile-friendly layout, and fast Vercel deployment for a retail client."
-  ),
-  clientSite(
-    "client-viva-soft",
-    "VIVA Soft",
-    "viva-soft",
-    "Software services company landing page.",
-    "https://viva-soft.vercel.app/",
-    "Professional landing site for VIVA Soft highlighting software services, contact flows, and a polished visual identity for B2B outreach."
-  ),
-  clientSite(
-    "client-veduka",
-    "Veduka Restaurant",
-    "veduka-restaurant",
-    "Restaurant website with menu and visit info.",
-    "https://vedukarestaurant.com/",
-    "Customer-facing restaurant website for Veduka—menu presentation, location details, and branding tailored for hospitality."
-  ),
-  clientSite(
-    "client-soltex",
-    "Soltex",
-    "soltex",
-    "Business website for Soltex.",
-    "https://soltex.vercel.app/",
-    "Corporate web presence for Soltex with service overview, contact sections, and responsive design on Vercel."
-  ),
   {
     _id: "local-care",
     name: "CARE",
     slug: "care",
-    tagline: "Open-source collaborative AI-assisted research platform.",
+    tagline: "Open-source research platform with shared PDF reading and AI help.",
     projectUrl: "https://github.com/UKPLab/CARE",
     logo: "/projects/care.svg",
     coverImage: {
@@ -89,11 +49,11 @@ export const featuredProjects: ProjectType[] = [
     },
     description: [
       paragraph(
-        "Open-source contribution to CARE (Collaborative AI-Assisted Research Environment) at the UKP Lab, TU Darmstadt—an integrated platform for collaborative PDF reading, annotation, writing, assessment, and NLP-assisted research workflows.",
+        "I contribute to CARE (Collaborative AI-Assisted Research Environment) at UKP Lab, TU Darmstadt. The repo is github.com/UKPLab/CARE. The app bundles PDF reading, annotations, writing, grading hooks, and NLP helpers in one place for research groups.",
         "care-1"
       ),
       paragraph(
-        "As a student developer I help build real-time collaborative features with Vue.js, Docker, Sequelize, and Socket.io, and work toward integrating intelligent reading assistance into production research tooling. Repository: github.com/UKPLab/CARE.",
+        "My work is mostly Vue.js on the front end, Sequelize and Docker for services, and Socket.io for live edits when several people read the same document. I am wiring reading-assist features into flows researchers already use.",
         "care-2"
       ),
     ],
@@ -102,7 +62,7 @@ export const featuredProjects: ProjectType[] = [
     _id: "local-llm-workspace",
     name: "llm-workspace",
     slug: "llm-workspace",
-    tagline: "Portable AI agent skills, memory & knowledge.",
+    tagline: "Agent skills, memory, and project notes outside your app repo.",
     projectUrl: "https://github.com/akash9676/llm-workspace",
     logo: "/projects/llm-workspace.svg",
     coverImage: {
@@ -112,11 +72,11 @@ export const featuredProjects: ProjectType[] = [
     },
     description: [
       paragraph(
-        "An open-source, cross-harness workspace for managing AI agent skills, coding-agent instructions, context engineering, agent memory, project knowledge, decisions, and task reports. It keeps AI development files outside application repos while sharing the same reusable knowledge across Cursor, Claude Code, and OpenAI Codex.",
+        "llm-workspace keeps SKILL.md files, CLAUDE.md / AGENTS.md instructions, memory, decisions, and task notes in one folder tree that is not tied to a single application repository. The same files install into Cursor, Claude Code, and OpenAI Codex via sync scripts.",
         "llm-ws-1"
       ),
       paragraph(
-        "Built for multi-agent teams: portable Agent Skills (SKILL.md), CLAUDE.md / AGENTS.md instructions, persistent memory, knowledge graphs, and sync scripts that install skills globally for Cursor, Claude Code, and Codex.",
+        "I built it because agent instructions were scattered across repos and kept drifting. The layout covers skills, knowledge graphs, and reports so a team can reuse context without copy-pasting prompts.",
         "llm-ws-2"
       ),
     ],
@@ -125,7 +85,7 @@ export const featuredProjects: ProjectType[] = [
     _id: "local-german-quiz",
     name: "German Quiz",
     slug: "german-quiz",
-    tagline: "Interactive German practice built in Next.js.",
+    tagline: "Next.js quiz app for German vocabulary practice.",
     projectUrl: "https://germanquiz.vercel.app/",
     logo: "/projects/german-quiz.svg",
     coverImage: {
@@ -135,9 +95,49 @@ export const featuredProjects: ProjectType[] = [
     },
     description: [
       paragraph(
-        "A TypeScript/Next.js quiz app for practicing German—built while living and studying in Darmstadt. Live at germanquiz.vercel.app.",
+        "A TypeScript and Next.js quiz I built while studying in Darmstadt. It runs at germanquiz.vercel.app and covers vocabulary drills I wanted for daily practice.",
         "de-1"
       ),
     ],
   },
+  clientSite(
+    "client-hr-it",
+    "HR IT Solutions",
+    "hr-it",
+    "Marketing site for HR and IT consulting.",
+    "https://hr-it-website.vercel.app/",
+    "React and Next.js marketing site for HR IT Solutions: service pages, responsive layout, and contact paths for HR and IT consulting leads."
+  ),
+  clientSite(
+    "client-archana",
+    "Archana Garments",
+    "archana-garments",
+    "Catalog-style storefront for a garments brand.",
+    "https://archanagarments.vercel.app/",
+    "Product-focused storefront for Archana Garments with mobile-first layout and Vercel hosting for a retail client."
+  ),
+  clientSite(
+    "client-viva-soft",
+    "VIVA Soft",
+    "viva-soft",
+    "Landing page for a software services company.",
+    "https://viva-soft.vercel.app/",
+    "B2B landing site for VIVA Soft with service copy, contact forms, and branding aimed at outbound sales."
+  ),
+  clientSite(
+    "client-veduka",
+    "Veduka Restaurant",
+    "veduka-restaurant",
+    "Restaurant site with menu and visit details.",
+    "https://vedukarestaurant.com/",
+    "Public site for Veduka Restaurant with menu sections, location hours, and hospitality-focused visuals."
+  ),
+  clientSite(
+    "client-soltex",
+    "Soltex",
+    "soltex",
+    "Corporate site for Soltex.",
+    "https://soltex.vercel.app/",
+    "Company site for Soltex with service overview, contact blocks, and responsive layout on Vercel."
+  ),
 ];

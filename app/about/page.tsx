@@ -2,7 +2,6 @@ import Image from "next/image";
 import { PortableText } from "@portabletext/react";
 import { BiEnvelope, BiLinkExternal, BiSolidDownload } from "react-icons/bi";
 import { CustomPortableText } from "../components/shared/CustomPortableText";
-import Heroes from "../components/pages/Heroes";
 import Usage from "../components/pages/Usage";
 import { Slide } from "../animation/Slide";
 import PageHeading from "@/app/components/shared/PageHeading";
@@ -18,8 +17,8 @@ export default function About() {
           <div className="order-2 lg:order-none">
             <Slide>
               <h1 className="font-incognito font-semibold tracking-tight sm:text-5xl text-3xl lg:leading-tight basis-1/2 mb-8">
-                I&apos;m {data.fullName}. I live in {data.location}, where I build
-                the future.
+                I&apos;m {data.fullName}. I live in {data.location} and build AI
+                systems and web products.
               </h1>
 
               <div className="dark:text-zinc-400 text-zinc-600 leading-relaxed">
@@ -28,6 +27,17 @@ export default function About() {
                   components={CustomPortableText}
                 />
               </div>
+
+              <p className="mt-8 dark:text-zinc-400 text-zinc-600 leading-relaxed">
+                Open for freelance work on AI, ML, and web products.{" "}
+                <a
+                  href={`mailto:${data.email}?subject=Freelance%20inquiry`}
+                  className="dark:text-primary-color text-secondary-color hover:underline font-medium"
+                >
+                  Email me
+                </a>{" "}
+                if you want to connect about a project.
+              </p>
             </Slide>
           </div>
 
@@ -83,7 +93,6 @@ export default function About() {
         <Slide delay={0.14}>
           <Usage />
         </Slide>
-        <Heroes />
       </div>
     </main>
   );

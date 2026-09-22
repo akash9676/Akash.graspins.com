@@ -11,7 +11,7 @@ export default function Job() {
     <main className="max-w-7xl mx-auto md:px-16 px-6">
       <PageHeading
         title="Work Experience"
-        description="Education, research, freelance delivery, and industry roles—from AI/ML studies and UKP Lab development to client websites and engineering internships."
+        description="Master's study at TU Darmstadt, UKP Lab work on CARE, freelance sites through Graspins, and earlier roles at IEEE, IK Technologies, and GDSC."
       />
 
       <Slide delay={0.18}>

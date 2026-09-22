@@ -47,7 +47,7 @@ export default function Project() {
     <main className="max-w-7xl mx-auto md:px-16 px-6">
       <PageHeading
         title="Projects"
-        description="Freelance client websites I shipped end to end, plus open-source AI/ML and web projects—from LLM tooling and recommender systems to production Next.js apps."
+        description="CARE and other open-source work first, then client sites and side projects I designed, built, and deployed."
       />
 
       <Slide delay={0.1}>
