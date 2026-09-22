@@ -1,4 +1,4 @@
-import { PortableTextBlock } from "sanity";
+import type { PortableTextBlock } from "@portabletext/types";
 
 export type ProfileType = {
   _id: string;
@@ -15,14 +15,7 @@ export type ProfileType = {
   location: string;
   resumeURL: string;
   og: string;
-  // socialLinks: {
-  //   codepen: string;
-  //   github: string;
-  //   linkedin: string;
-  //   twitter: string;
-  // };
   usage: PortableTextBlock[];
-  // skills: string[];
 };
 
 export type JobType = {
@@ -42,6 +35,7 @@ export type ProjectType = {
   slug: string;
   tagline: string;
   projectUrl: string;
+  embedUrl?: string;
   logo: string;
   coverImage: {
     image: string;

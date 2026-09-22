@@ -1,29 +1,7 @@
-import type { PortableTextBlock } from "sanity";
+import { paragraph } from "@/lib/portable-text";
 
-/** Portable Text helper for plain paragraphs */
-function paragraph(text: string, key: string): PortableTextBlock {
-  return {
-    _type: "block",
-    _key: key,
-    style: "normal",
-    markDefs: [],
-    children: [
-      {
-        _type: "span",
-        _key: `${key}-span`,
-        marks: [],
-        text,
-      },
-    ],
-  } as PortableTextBlock;
-}
-
-/**
- * AI-engineer profile copy used by the portfolio.
- * Text fields override Sanity CMS values so the site stays in sync with
- * GitHub work even when Studio credentials are unavailable.
- */
 export const profileContent = {
+  _id: "local-profile",
   fullName: "Akash Gundapuneni",
   headline: "AI Engineer building LLM agents and ML systems.",
   location: "Darmstadt, Germany",
@@ -40,11 +18,11 @@ export const profileContent = {
       "bio-2"
     ),
     paragraph(
-      "Earlier in my career I led web delivery at Graspins Innovations and built SharePoint solutions at IK Technologies, which gave me strong product and systems instincts I now apply to AI products. I have contributed to research on sentiment analysis, chatbot performance, and sustainable blockchain, served as IEEE Research Scholar & Web Master, and mentored thousands of developers through Google Developer Student Clubs. I also hold the IBM Data Science Professional Certificate.",
+      "As a Student Web Developer at the UKP Lab, I contribute to CARE (Collaborative AI-Assisted Research Environment)—building real-time collaborative reading and annotation features with Vue.js, Docker, and Socket.io while integrating NLP-assisted workflows. Earlier I led web delivery at Graspins Innovations and built SharePoint solutions at IK Technologies, which gave me strong product instincts I now apply to AI products.",
       "bio-3"
     ),
     paragraph(
-      "My goal is to design reliable, human-centered AI systems for healthcare, education, and industry—bridging research-grade models with production-ready software.",
+      "I have contributed to research on sentiment analysis, chatbot performance, and sustainable blockchain, served as IEEE Research Scholar & Web Master, and mentored thousands of developers through Google Developer Student Clubs. I also hold the IBM Data Science Professional Certificate. My goal is to design reliable, human-centered AI systems for healthcare, education, and industry.",
       "bio-4"
     ),
   ],
@@ -62,8 +40,17 @@ export const profileContent = {
       "usage-3"
     ),
     paragraph(
-      "Software & Delivery:\nTypeScript, React, Next.js, Node.js, Tailwind CSS, REST APIs, GitHub, Vercel, Docker basics, Azure DevOps.",
+      "Software & Delivery:\nTypeScript, React, Next.js, Node.js, Vue.js, Tailwind CSS, REST APIs, GitHub, Vercel, Docker, Azure DevOps.",
       "usage-4"
     ),
   ],
+  resumeURL:
+    "https://drive.google.com/uc?export=download&id=11NUBUKNJfQVv3fF_hktonMmLLkcH___3",
+  og: "",
+  profileImage: {
+    image: "/profile/akash.jpg",
+    lqip:
+      "data:image/jpeg;base64,/9j/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAbABQDASIAAhEBAxEB/8QAGgAAAQUBAAAAAAAAAAAAAAAAAAIDBQYHBP/EACcQAAIBBAEDAgcAAAAAAAAAAAEDAgAEBRESBiExFHEyQUJRYYHR/8QAFwEAAwEAAAAAAAAAAAAAAAAAAAEDBP/EAB0RAAIDAAIDAAAAAAAAAAAAAAECABESAwQhIlH/2gAMAwEAAhEDEQA/ANLfcwhKE2thCESCZE6AqKfkcblZsjZXinMSw7EZd9GspuM3HMuhatuZLTKQlLf1a+VL6gyKcX6a5UVoYsiPGK+BmD596zOfcLLohyX+TTiV70YT/VFc+E6rtTirYh6I7gDqcNmijMVyi3uAweLTcIUt7Wp0ZOJ2R/Kj7CCGvSb+3FzasZwgWDlsfj7VbjCFwrqMuiJnx3FNYJKmYdcZriQlZK+3wmnXnRho1mOvx8LcwXYJiLYRHAedCipzpRK3YO3m2PKXfufeipNxITZEqvY5FFAz/9k=",
+    alt: "Akash Gundapuneni",
+  },
 };

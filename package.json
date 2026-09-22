@@ -6,41 +6,34 @@
     "dev": "next dev",
     "build": "next lint && next build",
     "start": "next start",
-    "sync:sanity": "node scripts/sync-sanity-content.mjs"
+    "screenshots": "node scripts/capture-project-screenshots.mjs"
   },
   "dependencies": {
     "@giscus/react": "^2.3.0",
-    "@sanity/client": "^6.15.19",
-    "@sanity/code-input": "^4.1.1",
-    "@sanity/image-url": "^1.0.2",
-    "@sanity/vision": "^3.36.2",
+    "@portabletext/react": "^3.0.11",
+    "@portabletext/types": "^2.0.13",
     "@types/node": "20.5.0",
     "@types/react": "18.2.20",
     "@types/react-dom": "18.2.7",
+    "@vercel/analytics": "^1.0.1",
     "autoprefixer": "10.4.15",
     "eslint": "8.45.0",
     "eslint-config-next": "^14.0.4",
     "framer-motion": "^10.16.0",
     "next": "^14.0.4",
-    "next-sanity": "^7.0.4",
+    "next-themes": "^0.2.1",
     "postcss": "8.4.31",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.10.1",
-    "sanity": "^3.36.2",
+    "react-refractor": "^2.1.7",
     "sharp": "^0.32.6",
-    "styled-components": "^6.1.8",
     "tailwindcss": "3.3.3",
     "typescript": "5.1.6"
   },
   "devDependencies": {
-    "@portabletext/react": "^3.0.11",
     "@types/refractor": "^3.0.2",
-    "@types/styled-components": "^5.1.34",
-    "@vercel/analytics": "^1.0.1",
     "encoding": "^0.1.13",
-    "next-sanity-image": "^6.1.0",
-    "next-themes": "^0.2.1",
-    "react-refractor": "^2.1.7"
+    "playwright": "^1.55.0"
   }
 }

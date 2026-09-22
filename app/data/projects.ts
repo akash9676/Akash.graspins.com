@@ -1,22 +1,5 @@
-import type { PortableTextBlock } from "sanity";
 import type { ProjectType } from "@/types";
-
-function paragraph(text: string, key: string): PortableTextBlock {
-  return {
-    _type: "block",
-    _key: key,
-    style: "normal",
-    markDefs: [],
-    children: [
-      {
-        _type: "span",
-        _key: `${key}-span`,
-        marks: [],
-        text,
-      },
-    ],
-  } as PortableTextBlock;
-}
+import { paragraph } from "@/lib/portable-text";
 
 const placeholderCover = {
   image: "/project.png",
@@ -25,11 +8,82 @@ const placeholderCover = {
     "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8z8BQDwAEhQGAhKmMIQAAAABJRU5ErkJggg==",
 };
 
-/**
- * Featured projects prioritized for an AI Engineer portfolio,
- * sourced from GitHub (akash9676) and rewritten for clarity.
- */
+function clientSite(
+  id: string,
+  name: string,
+  slug: string,
+  tagline: string,
+  url: string,
+  description: string
+): ProjectType {
+  const screenshot = `/projects/screenshots/${slug}.png`;
+  return {
+    _id: id,
+    name,
+    slug,
+    tagline,
+    projectUrl: url,
+    embedUrl: url,
+    logo: screenshot,
+    coverImage: {
+      image: screenshot,
+      alt: `${name} website preview`,
+      lqip: placeholderCover.lqip,
+    },
+    description: [paragraph(description, `${slug}-desc`)],
+  };
+}
+
+/** Freelance client websites + open-source / research projects. */
 export const featuredProjects: ProjectType[] = [
+  clientSite(
+    "client-hr-it",
+    "HR IT Solutions",
+    "hr-it",
+    "Corporate site for HR & IT services.",
+    "https://hr-it-website.vercel.app/",
+    "Marketing and services website for HR IT Solutions—built with modern React/Next.js patterns, responsive layout, and clear service positioning for HR and IT consulting."
+  ),
+  clientSite(
+    "client-tx-desi",
+    "TX DESI Connect",
+    "tx-desi",
+    "Community platform for the Texas desi diaspora.",
+    "https://www.txdesiconnect.com/",
+    "Full-stack community website connecting the Texas desi community—events, resources, and engagement features delivered as a production-ready web app."
+  ),
+  clientSite(
+    "client-archana",
+    "Archana Garments",
+    "archana-garments",
+    "E-commerce style storefront for a garments brand.",
+    "https://archanagarments.vercel.app/",
+    "Brand and catalog experience for Archana Garments—product-focused UI, mobile-friendly layout, and fast Vercel deployment for a retail client."
+  ),
+  clientSite(
+    "client-viva-soft",
+    "VIVA Soft",
+    "viva-soft",
+    "Software services company landing page.",
+    "https://viva-soft.vercel.app/",
+    "Professional landing site for VIVA Soft highlighting software services, contact flows, and a polished visual identity for B2B outreach."
+  ),
+  clientSite(
+    "client-veduka",
+    "Veduka Restaurant",
+    "veduka-restaurant",
+    "Restaurant website with menu and visit info.",
+    "https://vedukarestaurant.com/",
+    "Customer-facing restaurant website for Veduka—menu presentation, location details, and branding tailored for hospitality."
+  ),
+  clientSite(
+    "client-soltex",
+    "Soltex",
+    "soltex",
+    "Business website for Soltex.",
+    "https://soltex.vercel.app/",
+    "Corporate web presence for Soltex with service overview, contact sections, and responsive design on Vercel."
+  ),
   {
     _id: "local-llm-workspace",
     name: "llm-workspace",
@@ -48,7 +102,7 @@ export const featuredProjects: ProjectType[] = [
         "llm-ws-1"
       ),
       paragraph(
-        "Built for multi-agent teams: portable Agent Skills (SKILL.md), CLAUDE.md / AGENTS.md instructions, persistent memory, knowledge graphs, and sync scripts that install skills globally for Cursor, Claude Code, and Codex. Demonstrates deep practice with agent orchestration and LLM developer tooling.",
+        "Built for multi-agent teams: portable Agent Skills (SKILL.md), CLAUDE.md / AGENTS.md instructions, persistent memory, knowledge graphs, and sync scripts that install skills globally for Cursor, Claude Code, and Codex.",
         "llm-ws-2"
       ),
     ],
@@ -71,28 +125,28 @@ export const featuredProjects: ProjectType[] = [
         "music-1"
       ),
       paragraph(
-        "Because Spotify audio-features APIs are restricted for newer apps, recommendations combine SASRec item embeddings with metadata vectors (genres, popularity, duration, release year). Includes caching, rate-limit handling, NDCG@10 / Hit Rate@10 evaluation, and playback controls for Premium devices.",
+        "Recommendations combine SASRec item embeddings with metadata vectors (genres, popularity, duration, release year). Includes caching, rate-limit handling, NDCG@10 / Hit Rate@10 evaluation, and playback controls for Premium devices.",
         "music-2"
       ),
     ],
   },
   {
-    _id: "local-gender-age",
-    name: "Gender & Age Detection",
-    slug: "gender-and-age-detection",
-    tagline: "Deep learning face analysis with OpenCV.",
-    projectUrl: "https://github.com/akash9676/Gender-and-Age-Detection",
-    logo: "https://cdn.sanity.io/images/rvlf0qwa/production/7a8c246dbdbb11b1ce9fe624bc0a9f52a6683f44-1024x1024.webp",
+    _id: "local-german-quiz",
+    name: "German Quiz",
+    slug: "german-quiz",
+    tagline: "Interactive German practice built in Next.js.",
+    projectUrl: "https://german-quiz-gules.vercel.app",
+    embedUrl: "https://german-quiz-gules.vercel.app",
+    logo: "/projects/german-quiz.svg",
     coverImage: {
-      image:
-        "https://cdn.sanity.io/images/rvlf0qwa/production/18c833f6bf4705de05d8a1e02b71e2d107c23cb3-1920x1080.jpg",
-      alt: "Gender and age detection demo",
-      lqip: placeholderCover.lqip,
+      ...placeholderCover,
+      image: "/projects/german-quiz.svg",
+      alt: "German quiz app",
     },
     description: [
       paragraph(
-        "A computer vision project that detects faces and estimates gender and age from images using deep learning models (Caffe) with OpenCV. The pipeline runs face detection followed by gender and age classification networks—useful for research demos, personalization experiments, and CV fundamentals.",
-        "cv-1"
+        "A TypeScript/Next.js quiz app for practicing German—built while living and studying in Darmstadt. Live at german-quiz-gules.vercel.app.",
+        "de-1"
       ),
     ],
   },
@@ -110,7 +164,7 @@ export const featuredProjects: ProjectType[] = [
     },
     description: [
       paragraph(
-        "Teaching materials and experiments from NLP4Web—covering core natural language processing techniques applied to web-scale text. Supports my Master’s focus on AI/ML with practical NLP pipelines and evaluation.",
+        "Teaching materials and experiments from NLP4Web—covering core natural language processing techniques applied to web-scale text.",
         "nlp-1"
       ),
     ],
@@ -129,47 +183,8 @@ export const featuredProjects: ProjectType[] = [
     },
     description: [
       paragraph(
-        "Coursework and Jupyter notebooks from the IBM Data Science Professional Certificate—data wrangling, visualization, machine learning, and end-to-end analysis that underpin my AI engineering practice.",
+        "Coursework and Jupyter notebooks from the IBM Data Science Professional Certificate—data wrangling, visualization, machine learning, and end-to-end analysis.",
         "ibm-1"
-      ),
-    ],
-  },
-  {
-    _id: "local-german-quiz",
-    name: "German Quiz",
-    slug: "german-quiz",
-    tagline: "Interactive German practice built in Next.js.",
-    projectUrl: "https://german-quiz-gules.vercel.app",
-    logo: "/projects/german-quiz.svg",
-    coverImage: {
-      ...placeholderCover,
-      image: "/projects/german-quiz.svg",
-      alt: "German quiz app",
-    },
-    description: [
-      paragraph(
-        "A TypeScript/Next.js quiz app for practicing German—built while living and studying in Darmstadt. Live at german-quiz-gules.vercel.app. Shows product thinking around learning UX alongside AI studies in Germany.",
-        "de-1"
-      ),
-    ],
-  },
-  {
-    _id: "local-instagram-filter",
-    name: "Instagram Filter App",
-    slug: "instagramfilterapp",
-    tagline: "React Native focus tools for Instagram.",
-    projectUrl: "https://github.com/akash9676/InstagramFilterApp",
-    logo: "https://cdn.sanity.io/images/rvlf0qwa/production/758b7ff5d8580cfe9352370dc781f21997bd9e5f-72x72.png",
-    coverImage: {
-      image:
-        "https://cdn.sanity.io/images/rvlf0qwa/production/18c833f6bf4705de05d8a1e02b71e2d107c23cb3-1920x1080.jpg",
-      alt: "Instagram Filter App",
-      lqip: placeholderCover.lqip,
-    },
-    description: [
-      paragraph(
-        "A React Native app that reduces distraction on Instagram by limiting reels and suggestion surfaces—custom UI filtering for healthier mobile habits. Demonstrates cross-platform mobile engineering alongside AI work.",
-        "ig-1"
       ),
     ],
   },
