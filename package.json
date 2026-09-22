@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next lint && next build",
-    "start": "next start"
+    "start": "next start",
+    "sync:sanity": "node scripts/sync-sanity-content.mjs"
   },
   "dependencies": {
     "@giscus/react": "^2.3.0",

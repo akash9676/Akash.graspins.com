@@ -2,22 +2,17 @@ import Image from "next/image";
 import { Slide } from "../animation/Slide";
 import PageHeading from "../components/shared/PageHeading";
 import { formatDate } from "@/app/utils/date";
-import { jobQuery } from "@/lib/sanity.query";
 import { JobType } from "@/types";
-import { sanityFetch } from "@/lib/sanity.client";
-
+import { getExperienceEntries } from "@/lib/content";
 
 export default async function Job() {
-  const job: JobType[] = await sanityFetch({
-    query: jobQuery,
-    tags: ["job"],
-  });
+  const job: JobType[] = getExperienceEntries();
 
   return (
     <main className="max-w-7xl mx-auto md:px-16 px-6">
       <PageHeading
-        title="Work Experience"
-        description="I've worked on tons of little projects over the years but these are the ones that I'm most proud of. Many of them are open-source, so if you see something that piques your interest, check out the code and contribute if you have ideas on how it can be improved."
+        title="Experience & Education"
+        description="Master’s studies in AI & ML at TU Darmstadt, plus research, leadership, and product engineering roles that shaped how I build intelligent systems."
       />
 
       <Slide delay={0.18}>
@@ -28,9 +23,9 @@ export default async function Job() {
               className="flex items-start lg:gap-x-6 gap-x-4 max-w-2xl relative before:absolute before:bottom-0 before:top-[5rem] before:left-9 before:w-[1px] before:h-[calc(100%-70px)] dark:before:bg-zinc-800 before:bg-zinc-200"
             >
               <a
-                href={data.url}
+                href={data.url || undefined}
                 rel="noreferrer noopener"
-                target="_blank"
+                target={data.url && data.url !== "#" ? "_blank" : undefined}
                 className="grid place-items-center dark:bg-primary-bg bg-secondary-bg border dark:border-zinc-800 border-zinc-200 min-h-[80px] min-w-[80px] p-2 rounded-md overflow-clip relative"
               >
                 <Image

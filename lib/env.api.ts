@@ -8,10 +8,8 @@ export const dataset: string = checkValue(
   "NEXT_PUBLIC_SANITY_DATASET"
 );
 
-export const token = checkValue(
-  process.env.NEXT_PUBLIC_SANITY_ACCESS_TOKEN,
-  "NEXT_PUBLIC_SANITY_ACCESS_TOKEN"
-);
+// Token is optional for public read-only CDN fetches; required only for Studio writes.
+export const token = process.env.NEXT_PUBLIC_SANITY_ACCESS_TOKEN;
 
 export const hookSecret = process.env.NEXT_PUBLIC_SANITY_HOOK_SECRET;
 export const mode = process.env.NODE_ENV;
