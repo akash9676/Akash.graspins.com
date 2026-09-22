@@ -19,7 +19,7 @@ export const experienceEntries: JobType[] = [
   {
     _id: "local-graspins",
     name: "Graspins Innovations",
-    jobTitle: "Lead Web Developer → AI-oriented delivery",
+    jobTitle: "Lead Developer · AI-oriented product delivery",
     logo: "https://cdn.sanity.io/images/rvlf0qwa/production/b825743766ed27400080f35b231def1c251a8bea-500x500.jpg",
     url: "https://akash-graspins-com.vercel.app",
     description:
@@ -52,7 +52,7 @@ export const experienceEntries: JobType[] = [
   {
     _id: "local-gdsc",
     name: "Google Developer Student Clubs",
-    jobTitle: "Content & Design Lead · Web Development Co-Lead",
+    jobTitle: "Content & Design Lead · Development Co-Lead",
     logo: "https://cdn.sanity.io/images/rvlf0qwa/production/fc765e2c6bf289b0c949dd5a4e7e294726ca96e9-204x192.png",
     url: "https://developers.google.com/community/gdsc",
     description:
