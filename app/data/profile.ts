@@ -7,7 +7,7 @@ export const profileContent = {
   location: "Darmstadt, Germany",
   email: "akashgundapuneni@gmail.com",
   shortBio:
-    "Master’s student in AI and ML at TU Darmstadt. I build LLM agents, recommender systems, computer vision models, and NLP tools, then ship them with Python, PyTorch, and TypeScript stacks. I also take freelance work in AI, web, and ML.",
+    "Master’s student in AI and ML at TU Darmstadt. I build LLM agents, NLP tools, and ML systems, then ship them with Python and TypeScript. I also take freelance work in AI, web, and ML.",
   fullBio: [
     paragraph(
       "I am Akash Gundapuneni, an AI engineer in the Master’s program in Artificial Intelligence and Machine Learning at TU Darmstadt. Before that I earned a B.Tech in Computer Science and Engineering (IoT focus) from Guru Nanak Institutions Technical Campus in Hyderabad. Most of my time goes to language models, ML systems, and research code that has to run for real users.",
