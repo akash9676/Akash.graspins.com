@@ -1,6 +1,6 @@
+import Image from "next/image";
 import { PortableText } from "@portabletext/react";
 import { CustomPortableText } from "@/app/components/shared/CustomPortableText";
-import ProjectSitePreview from "@/app/components/shared/ProjectSitePreview";
 import { Slide } from "../../animation/Slide";
 import { getFeaturedProjects, getProjectBySlug } from "@/lib/content";
 import NotFoundComponent from "@/app/components/shared/NotFound";
@@ -54,12 +54,17 @@ export default function Project({ params }: Props) {
 
           <p className="dark:text-zinc-400 text-zinc-600 mb-6">{project.tagline}</p>
 
-          <ProjectSitePreview
-            name={project.name}
-            embedUrl={project.embedUrl}
-            screenshotSrc={project.coverImage.image}
-            screenshotAlt={project.coverImage.alt || project.name}
-          />
+          <div className="relative w-full aspect-[16/10] mb-8">
+            <Image
+              className="rounded-xl border dark:border-zinc-800 border-zinc-100 object-cover object-top"
+              fill
+              src={project.coverImage.image}
+              alt={project.coverImage.alt || project.name}
+              quality={90}
+              sizes="(max-width: 768px) 100vw, 896px"
+              priority
+            />
+          </div>
 
           <div className="mt-8 dark:text-zinc-400 text-zinc-600 leading-relaxed">
             <PortableText
