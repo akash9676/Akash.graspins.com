@@ -5,10 +5,19 @@ import { Slide } from "../../animation/Slide";
 import { sanityFetch } from "@/lib/sanity.client";
 
 export default async function Heroes() {
-  const heroes: HeroeType[] = await sanityFetch({
-    query: heroesQuery,
-    tags: ["heroe"],
-  });
+  let heroes: HeroeType[] = [];
+  try {
+    heroes = await sanityFetch({
+      query: heroesQuery,
+      tags: ["heroe"],
+    });
+  } catch {
+    heroes = [];
+  }
+
+  if (!heroes.length) {
+    return null;
+  }
 
   return (
     <section className="mt-32 max-w-5xl">

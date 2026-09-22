@@ -1,11 +1,9 @@
 import Image from "next/image";
-import { singleProjectQuery } from "@/lib/sanity.query";
-import type { ProjectType } from "@/types";
 import { PortableText } from "@portabletext/react";
 import { CustomPortableText } from "@/app/components/shared/CustomPortableText";
 import { Slide } from "../../animation/Slide";
-import { urlFor } from "@/lib/sanity.image";
-import { sanityFetch } from "@/lib/sanity.client";
+import { getFeaturedProjects, getProjectBySlug } from "@/lib/content";
+import { notFound } from "next/navigation";
 
 type Props = {
   params: {
@@ -13,14 +11,19 @@ type Props = {
   };
 };
 
+export function generateStaticParams() {
+  return getFeaturedProjects().map((project) => ({
+    project: project.slug,
+  }));
+}
 
 export default async function Project({ params }: Props) {
   const slug = params.project;
-  const project: ProjectType = await sanityFetch({
-    query: singleProjectQuery,
-    tags: ["project"],
-    qParams: { slug },
-  });
+  const project = getProjectBySlug(slug);
+
+  if (!project) {
+    notFound();
+  }
 
   return (
     <main className="max-w-6xl mx-auto lg:px-16 px-8">
@@ -48,11 +51,11 @@ export default async function Project({ params }: Props) {
           <div className="relative w-full h-40 pt-[52.5%]">
             <Image
               className="rounded-xl border dark:border-zinc-800 border-zinc-100 object-cover"
-              layout="fill"
-              src={project.coverImage?.image }
+              fill
+              src={project.coverImage?.image}
               alt={project.coverImage?.alt || project.name}
               quality={100}
-              placeholder={project.coverImage?.lqip ? `blur` : "empty"}
+              placeholder={project.coverImage?.lqip ? "blur" : "empty"}
               blurDataURL={project.coverImage?.lqip || ""}
             />
           </div>

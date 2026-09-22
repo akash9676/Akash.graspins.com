@@ -12,8 +12,8 @@ const config: ClientConfig = {
   apiVersion,
   useCdn: mode === "development" ? true : false,
   ignoreBrowserTokenWarning: true,
-  token,
   perspective: "published",
+  ...(token ? { token } : {}),
 };
 
 const client = createClient(config);
