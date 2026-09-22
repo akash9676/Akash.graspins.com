@@ -1,23 +1,33 @@
 import Image from "next/image";
-import { urlFor } from "@/lib/sanity.image";
+
+type SanityImageValue = {
+  asset?: { url?: string };
+  alt?: string;
+};
 
 type imageProp = {
-  src: {};
+  src: string | SanityImageValue;
   alt: string;
 };
 
+function resolveImageUrl(src: string | SanityImageValue): string {
+  if (typeof src === "string") return src;
+  return src.asset?.url ?? "";
+}
+
 export default function ImageComponent({ src, alt }: imageProp) {
+  const url = resolveImageUrl(src);
+  if (!url) return null;
+
   return (
     <Image
       className="rounded-sm object-contain object-left-top aspect-auto duration-300"
-      src={urlFor(src).url()}
+      src={url}
       alt={alt}
       loading="lazy"
       width={900}
       height={900}
-      placeholder="blur"
       quality={100}
-      blurDataURL={urlFor(src).blur(10).quality(10).url()}
     />
   );
 }

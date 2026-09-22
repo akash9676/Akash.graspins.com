@@ -2,22 +2,16 @@ import Image from "next/image";
 import { Slide } from "../animation/Slide";
 import PageHeading from "../components/shared/PageHeading";
 import { formatDate } from "@/app/utils/date";
-import { jobQuery } from "@/lib/sanity.query";
-import { JobType } from "@/types";
-import { sanityFetch } from "@/lib/sanity.client";
+import { getExperienceEntries } from "@/lib/content";
 
-
-export default async function Job() {
-  const job: JobType[] = await sanityFetch({
-    query: jobQuery,
-    tags: ["job"],
-  });
+export default function Job() {
+  const job = getExperienceEntries();
 
   return (
     <main className="max-w-7xl mx-auto md:px-16 px-6">
       <PageHeading
         title="Work Experience"
-        description="I've worked on tons of little projects over the years but these are the ones that I'm most proud of. Many of them are open-source, so if you see something that piques your interest, check out the code and contribute if you have ideas on how it can be improved."
+        description="Education, research, freelance delivery, and industry roles—from AI/ML studies and UKP Lab development to client websites and engineering internships."
       />
 
       <Slide delay={0.18}>

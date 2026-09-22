@@ -1,14 +1,9 @@
 import { PortableText } from "@portabletext/react";
-import { profileQuery } from "@/lib/sanity.query";
-import type { ProfileType } from "@/types";
 import { CustomPortableTextFavicon } from "../shared/CustomPortableTextFavicon";
-import { sanityFetch } from "@/lib/sanity.client";
+import { getProfile } from "@/lib/content";
 
-export default async function Usage() {
-  const profile: ProfileType[] = await sanityFetch({
-    query: profileQuery,
-    tags: ["profile"],
-  });
+export default function Usage() {
+  const profile = getProfile();
 
   return (
     <section className="max-w-2xl">
@@ -19,13 +14,10 @@ export default async function Usage() {
           to.
         </p>
       </div>
-      {profile.map((textBlock, id) => (
-        <PortableText
-          key={id}
-          value={textBlock.usage}
-          components={CustomPortableTextFavicon}
-        />
-      ))}
+      <PortableText
+        value={profile.usage}
+        components={CustomPortableTextFavicon}
+      />
     </section>
   );
 }
