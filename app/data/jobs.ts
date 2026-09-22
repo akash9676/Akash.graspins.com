@@ -20,9 +20,9 @@ export const experienceEntries: JobType[] = [
     logo: "https://www.google.com/s2/favicons?domain=graspins.com&sz=128",
     url: "https://akash-graspins-com.vercel.app/",
     description:
-      "I own delivery for freelance and client sites in React, Next.js, Node.js, and Tailwind. Shipped HR IT Solutions, Archana Garments, VIVA Soft, Veduka Restaurant, and Soltex: design, build, Vercel deploys, and follow-up fixes.",
+      "Led delivery for freelance and client sites in React, Next.js, Node.js, and Tailwind. Shipped HR IT Solutions, Archana Garments, VIVA Soft, Veduka Restaurant, and Soltex: design, build, Vercel deploys, and follow-up fixes.",
     startDate: "2024-04-01",
-    endDate: "",
+    endDate: "2024-08-31",
   },
   {
     _id: "local-ieee",

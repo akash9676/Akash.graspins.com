@@ -2,7 +2,6 @@ import Image from "next/image";
 import { PortableText } from "@portabletext/react";
 import { BiEnvelope, BiLinkExternal, BiSolidDownload } from "react-icons/bi";
 import { CustomPortableText } from "../components/shared/CustomPortableText";
-import Heroes from "../components/pages/Heroes";
 import Usage from "../components/pages/Usage";
 import { Slide } from "../animation/Slide";
 import PageHeading from "@/app/components/shared/PageHeading";
@@ -83,7 +82,6 @@ export default function About() {
         <Slide delay={0.14}>
           <Usage />
         </Slide>
-        <Heroes />
       </div>
     </main>
   );
