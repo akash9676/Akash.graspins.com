@@ -14,7 +14,7 @@ export const profileContent = {
       "bio-1"
     ),
     paragraph(
-      "Today I focus on agentic AI, LLM tooling, sequential recommendation, computer vision, and NLP. Recent projects include llm-workspace—a portable multi-agent skills and memory workspace for Cursor, Claude Code, and Codex—and an LLM music recommender using SASRec with LoRA fine-tuning. I use AI extensively in day-to-day engineering: coding agents, context engineering, evaluation loops, and model experimentation.",
+      "Today I focus on agentic AI, LLM tooling, NLP, and applied ML. Recent work includes llm-workspace—a portable multi-agent skills and memory workspace for Cursor, Claude Code, and Codex—and open-source contributions to the CARE research platform at UKP Lab. I use AI extensively in day-to-day engineering: coding agents, context engineering, evaluation loops, and model experimentation.",
       "bio-2"
     ),
     paragraph(
@@ -28,7 +28,7 @@ export const profileContent = {
   ],
   usage: [
     paragraph(
-      "AI & Machine Learning:\nPython, PyTorch, TensorFlow/Keras, scikit-learn, Hugging Face, LoRA / PEFT, SASRec, OpenCV, NLP, computer vision, recommendation systems, evaluation metrics (NDCG, Hit Rate), Jupyter, FastAPI.",
+      "AI & Machine Learning:\nPython, PyTorch, Hugging Face, LoRA & fine-tuning, NLP, Jupyter, Transformers (training & testing).",
       "usage-1"
     ),
     paragraph(

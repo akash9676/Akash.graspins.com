@@ -1,18 +1,7 @@
 import type { JobType } from "@/types";
 
-/** Work experience and education timeline (newest first). */
+/** Work experience timeline (newest first). */
 export const experienceEntries: JobType[] = [
-  {
-    _id: "local-tud-masters",
-    name: "TU Darmstadt",
-    jobTitle: "M.Sc. Artificial Intelligence and Machine Learning",
-    logo: "/projects/tu-darmstadt.svg",
-    url: "https://www.tu-darmstadt.de/",
-    description:
-      "Master’s studies in Artificial Intelligence and Machine Learning in Darmstadt, Germany. Focus areas include deep learning, LLMs and agentic systems, NLP, computer vision, recommendation models, and applied ML research—paired with extensive use of AI coding agents in coursework and personal projects.",
-    startDate: "2024-10-01",
-    endDate: "",
-  },
   {
     _id: "local-ukp",
     name: "UKP Lab · TU Darmstadt",
@@ -31,7 +20,7 @@ export const experienceEntries: JobType[] = [
     logo: "https://www.google.com/s2/favicons?domain=graspins.com&sz=128",
     url: "https://akash-graspins-com.vercel.app/",
     description:
-      "Led end-to-end web delivery for freelance and client projects using React, Next.js, Node.js, and Tailwind. Shipped production sites including HR IT Solutions, TX DESI Connect, Archana Garments, VIVA Soft, Veduka Restaurant, and Soltex—handling design, development, deployment on Vercel, and ongoing iterations.",
+      "Led end-to-end web delivery for freelance and client projects using React, Next.js, Node.js, and Tailwind. Shipped production sites including HR IT Solutions, Archana Garments, VIVA Soft, Veduka Restaurant, and Soltex—handling design, development, deployment on Vercel, and ongoing iterations.",
     startDate: "2024-04-01",
     endDate: "",
   },
@@ -67,16 +56,5 @@ export const experienceEntries: JobType[] = [
       "Engaged 3,000+ developers across 30 events covering web, DSA, ML, blockchain, and cloud. Led a 5-day web development bootcamp mentoring 200+ participants and coordinated hackathons and tech talks.",
     startDate: "2022-07-04",
     endDate: "2023-08-05",
-  },
-  {
-    _id: "local-feliks",
-    name: "Feliks Club",
-    jobTitle: "Operations Lead",
-    logo: "https://www.google.com/s2/favicons?domain=gnitc.ac.in&sz=128",
-    url: "https://www.gnitc.ac.in/",
-    description:
-      "Ran 20+ technical and non-technical events, coordinated volunteers, and promoted knowledge sharing around emerging technologies.",
-    startDate: "2022-03-02",
-    endDate: "2023-10-03",
   },
 ];

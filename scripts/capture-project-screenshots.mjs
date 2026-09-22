@@ -4,11 +4,12 @@ import path from "node:path";
 
 const sites = [
   { slug: "hr-it", url: "https://hr-it-website.vercel.app/" },
-  { slug: "tx-desi", url: "https://txdesiconnect.com/" },
   { slug: "archana-garments", url: "https://archanagarments.vercel.app/" },
   { slug: "viva-soft", url: "https://viva-soft.vercel.app/" },
   { slug: "veduka-restaurant", url: "https://vedukarestaurant.com/" },
   { slug: "soltex", url: "https://soltex.vercel.app/" },
+  { slug: "german-quiz", url: "https://germanquiz.vercel.app/" },
+  { slug: "care", url: "https://care.ukp.informatik.tu-darmstadt.de/" },
 ];
 
 const outDir = path.join(process.cwd(), "public/projects/screenshots");
