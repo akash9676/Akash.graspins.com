@@ -27,6 +27,17 @@ export default function About() {
                   components={CustomPortableText}
                 />
               </div>
+
+              <p className="mt-8 dark:text-zinc-400 text-zinc-600 leading-relaxed">
+                Open for freelance work on AI, ML, and web products.{" "}
+                <a
+                  href={`mailto:${data.email}?subject=Freelance%20inquiry`}
+                  className="dark:text-primary-color text-secondary-color hover:underline font-medium"
+                >
+                  Email me
+                </a>{" "}
+                if you want to connect about a project.
+              </p>
             </Slide>
           </div>
 
