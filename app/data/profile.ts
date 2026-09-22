@@ -3,40 +3,40 @@ import { paragraph } from "@/lib/portable-text";
 export const profileContent = {
   _id: "local-profile",
   fullName: "Akash Gundapuneni",
-  headline: "AI Engineer building LLM agents and ML systems.",
+  headline: "AI engineer working on LLM agents and ML systems.",
   location: "Darmstadt, Germany",
   email: "akashgundapuneni@gmail.com",
   shortBio:
-    "I am an AI Engineer and Master’s student in Artificial Intelligence and Machine Learning at TU Darmstadt, Germany. I build LLM agents, recommendation systems, computer vision models, and NLP tools—using extensive AI across research and production. I combine deep learning, data science, and full-stack skills to ship intelligent products end to end.",
+    "Master’s student in AI and ML at TU Darmstadt. I build LLM agents, recommender systems, computer vision models, and NLP tools, then ship them with Python, PyTorch, and TypeScript stacks. I like end-to-end work: data, model, API, and UI.",
   fullBio: [
     paragraph(
-      "I am Akash Gundapuneni, an AI Engineer pursuing a Master’s degree in Artificial Intelligence and Machine Learning at TU Darmstadt in Darmstadt, Germany. I hold a Bachelor’s degree in Computer Science and Engineering with a specialization in the Internet of Things from Guru Nanak Institutions Technical Campus, Hyderabad. My work sits at the intersection of large language models, machine learning systems, and applied research.",
+      "I am Akash Gundapuneni, an AI engineer in the Master’s program in Artificial Intelligence and Machine Learning at TU Darmstadt. Before that I earned a B.Tech in Computer Science and Engineering (IoT focus) from Guru Nanak Institutions Technical Campus in Hyderabad. Most of my time goes to language models, ML systems, and research code that has to run for real users.",
       "bio-1"
     ),
     paragraph(
-      "Today I focus on agentic AI, LLM tooling, NLP, and applied ML. Recent work includes llm-workspace—a portable multi-agent skills and memory workspace for Cursor, Claude Code, and Codex—and open-source contributions to the CARE research platform at UKP Lab. I use AI extensively in day-to-day engineering: coding agents, context engineering, evaluation loops, and model experimentation.",
+      "Recent projects include llm-workspace, a shared folder for agent skills and memory across Cursor, Claude Code, and Codex, and open-source work on the CARE platform at UKP Lab. Day to day I lean on coding agents, structured prompts, eval loops, and quick model experiments when a feature needs a new baseline.",
       "bio-2"
     ),
     paragraph(
-      "As a Student Web Developer at the UKP Lab, I contribute to CARE (Collaborative AI-Assisted Research Environment)—building real-time collaborative reading and annotation features with Vue.js, Docker, and Socket.io while integrating NLP-assisted workflows. Earlier I led web delivery at Graspins Innovations and built SharePoint solutions at IK Technologies, which gave me strong product instincts I now apply to AI products.",
+      "At UKP Lab I work on CARE (Collaborative AI-Assisted Research Environment): Vue.js front end, Dockerized services, Socket.io for live collaboration, and NLP hooks in reading workflows. Before Germany I led client web delivery at Graspins Innovations and wrote SharePoint Framework components at IK Technologies, which taught me how to ship under client deadlines.",
       "bio-3"
     ),
     paragraph(
-      "I have contributed to research on sentiment analysis, chatbot performance, and sustainable blockchain, served as IEEE Research Scholar & Web Master, and mentored thousands of developers through Google Developer Student Clubs. I also hold the IBM Data Science Professional Certificate. My goal is to design reliable, human-centered AI systems for healthcare, education, and industry.",
+      "I have co-authored research on sentiment analysis, chatbots, and sustainable blockchain, served as IEEE Research Scholar and Web Master, and mentored developers through Google Developer Student Clubs. I hold the IBM Data Science Professional Certificate. I want AI products that are dependable in healthcare, education, and industry, not demo-only.",
       "bio-4"
     ),
   ],
   usage: [
     paragraph(
-      "AI & Machine Learning:\nPython, PyTorch, Hugging Face, LoRA & fine-tuning, NLP, Jupyter, Transformers (training & testing).",
+      "AI & Machine Learning:\nPython, PyTorch, Hugging Face, LoRA fine-tuning, NLP, Jupyter, transformer training and eval.",
       "usage-1"
     ),
     paragraph(
-      "LLM & Agentic AI:\nOpenAI API, Claude, Cursor, Codex, Claude Code, prompt & context engineering, agent skills, RAG patterns, multi-agent workflows, LangChain-style tooling, model fine-tuning.",
+      "LLM & Agentic AI:\nOpenAI API, Claude, Cursor, Codex, Claude Code, prompt design, agent skills, RAG setups, multi-agent flows, LangChain-style tooling, fine-tuning runs.",
       "usage-2"
     ),
     paragraph(
-      "Data & MLOps:\nSQL, pandas, NumPy, feature engineering, experiment tracking, Spotify/Web APIs, caching & rate limiting, IBM Data Science stack, Tableau, Power BI.",
+      "Data & MLOps:\nSQL, pandas, NumPy, feature work, experiment tracking, Spotify and web APIs, caching and rate limits, IBM Data Science stack, Tableau, Power BI.",
       "usage-3"
     ),
     paragraph(
